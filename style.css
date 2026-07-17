@@ -1,16 +1,23 @@
-body {
-  font-family: Arial;
-  text-align: center;
+let cart = [];
+
+function addToCart(item) {
+  cart.push(item);
+  displayCart();
 }
 
-.menu {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
+function displayCart() {
+  let cartList = document.getElementById("cart");
+  cartList.innerHTML = "";
 
-.item {
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 10px;
+  cart.forEach(i => {
+    let li = document.createElement("li");
+    li.textContent = i;
+    cartList.appendChild(li);
+  });
+
+  let orderText = cart.join(", ");
+  let phone = "91XXXXXXXXXX"; // apna number daal
+
+  document.getElementById("orderBtn").href =
+    "https://wa.me/" + phone + "?text=I want to order: " + orderText;
 }

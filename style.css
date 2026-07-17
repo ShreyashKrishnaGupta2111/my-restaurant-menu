@@ -1,0 +1,16 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+}

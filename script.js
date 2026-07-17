@@ -1,0 +1,23 @@
+let cart = [];
+
+function addToCart(item) {
+  cart.push(item);
+  displayCart();
+}
+
+function displayCart() {
+  let cartList = document.getElementById("cart");
+  cartList.innerHTML = "";
+
+  cart.forEach(i => {
+    let li = document.createElement("li");
+    li.textContent = i;
+    cartList.appendChild(li);
+  });
+
+  let orderText = cart.join(", ");
+  let phone = "91XXXXXXXXXX"; // replace with your number
+
+  document.getElementById("orderBtn").href =
+    "https://wa.me/" + phone + "?text=I want to order: " + orderText;
+}

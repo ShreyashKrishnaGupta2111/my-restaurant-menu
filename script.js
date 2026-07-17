@@ -21,7 +21,7 @@ function displayCart() {
 
   let orderText = cart.map(i => i.item + " ₹" + i.price).join(", ");
 
-  let phone = "91XXXXXXXXXX"; // ⚠️ apna number daal
+  let phone = "91XXXXXXXXXX"; // 🔴 CHANGE THIS
 
   document.getElementById("orderBtn").href =
     "https://wa.me/" + phone +

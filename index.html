@@ -1,95 +1,51 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-  url("https://images.unsplash.com/photo-1498654896293-37aacf113fd9");
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
+<h1>🍽️ Delicious Bites</h1>
 
-/* Title */
-h1 {
-  margin: 20px 0;
-  font-size: 40px;
-}
+<div class="menu">
 
-/* Grid layout (FIXED alignment) */
-.menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 20px;
-  gap: 25px;
-}
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1601924582975-7e6b4e8b7d9b" alt="Pizza">
+    <h3>Pizza</h3>
+    <p>₹200</p>
+    <button onclick="addToCart('Pizza')">Order</button>
+  </div>
 
-/* Card design (same size for all) */
-.card {
-  background: white;
-  color: black;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-  max-width: 280px;
-  margin: auto;
-}
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Burger">
+    <h3>Burger</h3>
+    <p>₹120</p>
+    <button onclick="addToCart('Burger')">Order</button>
+  </div>
 
-.card:hover {
-  transform: translateY(-8px);
-}
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1604908812345-46e6e0c5d68c" alt="Pasta">
+    <h3>Pasta</h3>
+    <p>₹180</p>
+    <button onclick="addToCart('Pasta')">Order</button>
+  </div>
 
-/* FIXED IMAGE SIZE */
-.card img {
-  width: 100%;
-  height: 180px;       /* fixed height */
-  object-fit: cover;   /* crop properly */
-}
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Sandwich">
+    <h3>Sandwich</h3>
+    <p>₹90</p>
+    <button onclick="addToCart('Sandwich')">Order</button>
+  </div>
 
-/* Text spacing */
-.card h3 {
-  margin: 10px 0 5px;
-}
+</div>
 
-.card p {
-  margin: 0;
-  font-weight: bold;
-}
+<h2>🛒 Cart</h2>
+<ul id="cart"></ul>
 
-/* FIXED BUTTON SIZE */
-button {
-  width: 80%;
-  padding: 10px;
-  margin: 12px 0;
-  border: none;
-  border-radius: 8px;
-  background: #ff4d4d;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
+<a id="orderBtn" target="_blank" class="order-btn">Place Order via WhatsApp</a>
 
-button:hover {
-  background: #e60000;
-}
+<script src="script.js"></script>
 
-/* Cart styling */
-#cart {
-  list-style: none;
-  padding: 0;
-}
-
-/* FIXED ORDER BUTTON */
-.order-btn {
-  display: inline-block;
-  margin: 20px auto;
-  padding: 12px 25px;
-  background: #25D366;
-  color: white;
-  border-radius: 10px;
-  font-size: 18px;
-  text-decoration: none;
-  width: auto;
-}
+</body>
+</html>
